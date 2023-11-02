@@ -1,0 +1,41 @@
+<div class="flex-bottom">
+    <h2>table:</h2>
+    <table>
+        <tr>
+            <th>S. No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Occupation</th>
+            <th class="action">Action</th>
+        </tr>
+        <tr *ngFor="let user of userDetails; let index = index">
+            <td>{{index + 1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.occupation}}</td>
+            <td>
+                <button class="update" (click)="updateInputData(user)">Update</button>
+                <button class="delete" (click)="popup(index); deleteTableRow = true">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="overlay" *ngIf="deleteTableRow">
+    <div class="deleteTableRow">
+        <p>Do you want to delete the user details?</p>
+        <button class="open" (click)="deleteData(indexObject); deleteTableRow = false">Yes</button>
+        <button class="close" (click)="deleteTableRow = false">No</button>
+    </div>
+</div>
+
+<!-- <div class="overlay" *ngIf="updateTableRow">
+    <div class="updateTableRow">
+        <p>Do you want to update the user details?</p>
+        <button class="open" (click)="updateTableRow = false">Yes</button>
+        <button class="close" (click)="updateTableRow = true">No</button>
+    </div>
+</div> -->
+

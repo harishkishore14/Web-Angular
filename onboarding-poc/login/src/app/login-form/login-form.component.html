@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+    <h2 class="heading">user login</h2>
+    
+    <div class="alert" *ngIf="isvalidUser">{{errorMessage}}</div>
+
+    <div class="user-wrap">
+
+      <label for="username">user name:</label> <br>
+
+      <input type="text" id="username" placeholder="Enter your Username" formControlName="username" (keypress)="onKeyPress($event)">
+
+      <div *ngIf="myfunc.username.errors && submit" class="alert">
+
+        <div *ngIf="myfunc.username.errors?.['required']">
+          Please enter your username
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="password-wrap">
+
+      <label for="password">password:</label>
+
+      <input type="{{ isVisible ? 'text' : 'password' }}" id="password" placeholder="Enter your Password" formControlName="password">
+
+      <i class="fa-solid fa-eye" id="eye" (click)="togglePassword()"></i>
+
+      <div *ngIf="myfunc.password.errors && submit" class="alert">
+
+        <div *ngIf="myfunc.password.errors?.['required']">
+          Please enter your password
+        </div>
+
+      </div>
+
+    </div>
+    
+    <br>
+
+    <button class="login">login</button>
+
+  </form>
+
+

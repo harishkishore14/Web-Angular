@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: peru;
+}
+
+.alert {
+    background-color: mistyrose;
+    color: red;
+    padding: 2px;
+    font-size: 14px;
+    border-radius: 3px;
+    text-align: center;
+    width: 300px;
+    margin-left: 10px;
+    display: block;
+}
+
+/* .error {
+    color: red;
+    text-align: center;
+    font-size: 12px;
+    margin-left: 20px;
+    display: block;
+} */
+
+/* .is-invalid .user-wrap, .is-invalid .pass-wrap {
+    border-color: #dc3545;
+    border-style: solid ;
+}
+  
+.is-invalid .alert,
+.is-invalid + * .alert {
+    display: block;
+} */
