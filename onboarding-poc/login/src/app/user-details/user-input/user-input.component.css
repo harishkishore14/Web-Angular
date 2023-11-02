@@ -1,0 +1,270 @@
+h2 {
+    color: white;
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+label {
+    color: white;
+    position: absolute;
+    font-size: 18px;
+    margin-left: 30px;
+    text-transform: capitalize;
+}
+
+input {
+    position: absolute;
+    padding: 5px 5px 5px 5px;
+}
+
+select {
+    position: absolute;
+}
+
+.flex-top {
+    margin-bottom: 60px;
+}
+
+.create {
+    color: white;
+    border: 0px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    /* bottom: 0px; */
+    top: 30px;
+    left: 655px;
+    text-transform: capitalize;
+    background-color: green;
+}
+
+.update {
+    color: white;
+    border: 0px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    /* bottom: 0px; */
+    top: 30px;
+    left: 675px;
+    text-transform: capitalize;
+    background-color: orangered;
+}
+
+/* #firstLabel {
+    top: 10px;
+} */
+
+#first {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+#ageLabel {
+    top: 87px;
+    left: 204px;
+}
+
+#age {
+    top: 115px;
+    left: 233px;
+}
+
+#genderLabel {
+    top: 87px;
+    left: 410px;
+}
+
+#gender {
+    top: 115px;
+    left: 440px;
+    width: 183px;
+    height: 30px;
+}
+
+#occupationLabel {
+    top: 87px;
+    left: 615px;
+}
+
+#occupation {
+    top: 115px;
+    left: 645px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: visible;
+    opacity: 1;
+}
+
+.createPopup {
+    position: absolute;
+    border-radius: 20px;
+    font-size: 20px;
+    left:440px;
+    top: 180px;
+    padding: 10px;
+    height: 200px;
+    width: 500px;
+    background-color: lightgreen;
+}
+
+.createPopup p {
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    color: darkgreen;
+    left: -7px;
+    top: 40px;
+}
+
+.createPopup .close {
+    position: absolute;
+    top: 0px;
+    left: 460px;
+    font-size: 40px;
+    color: black;
+    background-color: lightgreen;
+}
+
+.createPopup .close:hover {
+    color: red;
+}
+
+.updatePopup {
+    position: absolute;
+    border-radius: 20px;
+    font-size: 20px;
+    left:440px;
+    top: 180px;
+    padding: 10px;
+    height: 200px;
+    width: 500px;
+    background-color: greenyellow;
+}
+
+.updatePopup p {
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    left: -7px;
+    color: orangered;
+    top: 40px;
+}
+
+.updatePopup .close {
+    position: absolute;
+    top: 0px;
+    left: 460px;
+    font-size: 40px;
+    color: black;
+    background-color: greenyellow;
+}
+
+.updatePopup .close:hover {
+    color: red;
+}
+
+.nameAlert div {
+    background-color: mistyrose;
+    color: red;
+    position: absolute;
+    top: 144px;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-align: center;
+    width: 181px;
+    margin-left: 31px;
+    display: block;
+}
+
+.ageAlert div {
+    background-color: mistyrose;
+    color: red;
+    position: absolute;
+    top: 144px;
+    left: 204px;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-align: center;
+    width: 181px;
+    margin-left: 30px;
+    display: block;
+}
+
+.genderAlert div {
+    background-color: mistyrose;
+    color: red;
+    position: absolute;
+    top: 144px;
+    left: 341px;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-align: center;
+    width: 181px;
+    margin-left: 100px;
+    display: block;
+}
+
+.occupationAlert div {
+    background-color: mistyrose;
+    color: red;
+    position: absolute;
+    top: 144px;
+    left: 486px;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-align: center;
+    width: 181px;
+    margin-left: 160px;
+    display: block;
+}
+
+/* .is-invalid .name-wrap, .is-invalid .age-wrap {
+    border-color: #dc3545;
+    border-style: solid ;
+}
+  
+.is-invalid .nameAlert,
+.is-invalid + * .nameAlert {
+    display: block;
+} */
+
+/* #nationLabel {
+    top: -92px;
+    left: 427px;
+}
+
+#nation {
+    top: -87px;
+    left: 640px;
+    width: 150px;
+} */
+
+
+/* #statusLabel {
+    top: -150px;
+    left: 750px;
+}
+
+#status {
+    bottom: 148px;
+    left: 963px;
+} */

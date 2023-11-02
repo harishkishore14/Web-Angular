@@ -1,0 +1,10 @@
+<app-user-input
+  (addTableRow)="addNewData($event)"
+  (updateDataToTable)="updateData($event)">
+</app-user-input>
+
+<app-table
+  [userDetails]="itemsList"
+  (selectTableRow)="selectRow($event)"
+  (deletePopup)="deleteRow($event)">
+</app-table>

@@ -1,0 +1,62 @@
+.heading {
+    color: white;
+    position: relative;
+    text-align: center;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+label {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+
+.login-form {
+    position: relative;
+    margin: 40px 500px;
+    background-color: brown;
+    padding: 10px 20px;
+    width: 360px;
+}
+
+.login {
+    cursor: pointer;
+    color: white;
+    position: relative;
+    margin: 30px 10px;
+    width: 300px;
+    border: 0px;
+    font-size: 16px;
+    padding: 10px 0px;
+    text-transform: capitalize;
+    background-color: sienna;
+}
+
+.user-wrap{
+    position: relative;
+    margin-top: 60px;
+}
+
+.password-wrap{
+    position: relative;
+    margin-top: 40px;
+}
+
+#username, #password{
+    width: 300px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 12px 12px 12px 12px;
+}
+
+.fa-eye{
+    position: absolute;
+    top: 55%;
+    left: 85%;
+    cursor: pointer;
+    color: gray;
+}

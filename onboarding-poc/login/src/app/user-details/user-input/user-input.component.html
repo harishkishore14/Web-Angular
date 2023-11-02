@@ -1,0 +1,97 @@
+<div class="flex-top">
+  <h2>user details:</h2>
+
+  <form [formGroup]="userForm">
+    <div class="name-wrap">
+      <label for="first" id="firstLabel">name:</label> <br>
+      <input type="text" id="first" placeholder="Name" formControlName="name" (keypress)="onKeyPress($event)">
+
+      <div *ngIf="validFunc.name.errors && submitted" class="nameAlert">
+        
+        <div *ngIf="validFunc.name.errors">
+          Name required
+        </div>
+
+        <div *ngIf="validFunc.name.errors?.['maxlength']">
+          Enter a valid name
+        </div>
+
+      </div>
+    </div>
+
+    <div class="age-wrap">
+      <label for="age" id="ageLabel">age:</label> <br>
+      <input type="text" id="age" placeholder="Age" formControlName="age" (keypress)="onNumberPress($event)">
+
+      <div *ngIf="validFunc.age.errors && submitted" class="ageAlert">
+        
+        <div *ngIf="validFunc.age.errors?.['required']">
+          Age required
+        </div>
+
+        <div *ngIf="validFunc.age.errors?.['maxlength']">
+          Enter a valid age
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="gender-wrap">
+      <label for="gender" id="genderLabel">gender:</label> <br>
+      <select id="gender" formControlName="gender" >
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <div *ngIf="validFunc.gender.errors && submitted" class="genderAlert">
+        
+        <div *ngIf="validFunc.gender.errors?.['required']">
+          Gender required
+        </div>
+
+      </div>
+    </div>
+
+    <div class="occupation-wrap">
+      <label for="occupation" id="occupationLabel">occupation:</label> <br>
+      <input type="text" id="occupation" placeholder="Occupation" formControlName="occupation" (keypress)="onKeyPress($event)">
+
+      <div *ngIf="validFunc.occupation.errors && submitted" class="occupationAlert">
+        
+        <div *ngIf="validFunc.occupation.errors?.['required']">
+          Occupation Required
+        </div>
+
+        <div *ngIf="validFunc.occupation.errors?.['maxlength']">
+          Enter a valid occupation
+        </div>
+
+      </div>
+    </div>
+
+    <!-- <label for="home" id="nationLabel">nationality:</label> <br>
+        <input type="text" id="nation" placeholder="Nationality" (keypress)="onKeyPress($event)">  -->
+
+    <!-- <label for="position" id="statusLabel">status:</label> <br>
+        <input type="text" id="status" placeholder="Status"> -->
+
+    <button type="button" class="create" (click)="addData()" [disabled]="isDisabled">create</button>
+
+    <button type="button" *ngIf="showButton" class="update" (click)="onUpdate()">update</button>
+  </form>
+</div>
+
+<div class="overlay" *ngIf="createPopup">
+  <div class="createPopup">
+    <p>New user created successfully<br>& added to table.</p>
+    <a class="close" (click)="createPopup = false">&times;</a>
+  </div>
+</div>
+
+<div class="overlay" *ngIf="updatePopup">
+  <div class="updatePopup">
+    <p>Existing user updated successfully<br>& modified in table.</p>
+    <a class="close" (click)="updatePopup = false">&times;</a>
+  </div>
+</div>
+
