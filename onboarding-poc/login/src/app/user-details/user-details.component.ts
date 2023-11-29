@@ -21,7 +21,7 @@ export class UserDetailsComponent {
   }
 
   updateData(updatedData: any) {
-    console.log("hiiii")
+    console.log("hiiii");
     if (this.selectedDetails !== null) {
       const index = this.itemsList.indexOf(this.selectedDetails);
       this.itemsList[index] = updatedData;
