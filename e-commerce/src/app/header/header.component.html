@@ -1,0 +1,48 @@
+<mat-toolbar class="max-w-xxl mx-auto border-x justify-between">
+  <a routerLink="/home">Online Shopping</a>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon
+      [matBadge]="itemsQuantity"
+      [matBadgeHidden]="!itemsQuantity"
+      matBadgeColor="warn"
+      aria-hidden="false"
+      >shopping_cart
+    </mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <div class="p-3 divide-y divide-solid">
+      <div class="pb-3 flex justify-between">
+        <span class="mr-16"> {{ itemsQuantity }} items</span>
+        <a routerLink="/cart">View cart</a>
+      </div>
+      <div *ngIf="cart.items.length" class="py-3">
+        <div
+          *ngFor="let item of cart.items"
+          class="flex justify-between font-light mb-2"
+        >
+          {{ item.name }} x {{ item.quantity }}
+          <span class="font-bold">{{ item.price | currency : "USD" }}</span>
+        </div>
+      </div>
+      <div class="flex justify-between py-3 font-light">
+        Total:
+        <span class="font-bold">{{ getTotal(cart.items) | currency }}</span>
+      </div>
+      <div class="pt-3 flex justify-between">
+        <button
+          (click)="onClearAll()"
+          class="bg-red-600 text-white rounded w-10 h-10"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button
+          routerLink="/cart"
+          class="bg-green-600 text-white rounded w-10 h-10"
+        >
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-menu>
+</mat-toolbar>

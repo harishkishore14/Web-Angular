@@ -1,0 +1,43 @@
+<mat-card class="mb-4">
+  <div class="flex justify-between">
+    <div class="p-3">
+      <button mat-button [matMenuTriggerFor]="sortByMenu">
+        Sort by {{ sort }}<mat-icon>expand_more</mat-icon>
+      </button>
+      <mat-menu #sortByMenu="matMenu">
+        <button (click)="updateSort('desc')" mat-menu-item>desc</button>
+        <button (click)="updateSort('asc')" mat-menu-item>asc</button>
+      </mat-menu>
+    </div>
+    <div class="flex items-center">
+      <div class="">
+        <button mat-button [matMenuTriggerFor]="menu">
+          Show {{ itemsShowCount }}<mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button (click)="updateItems(12)" mat-menu-item>12</button>
+          <button (click)="updateItems(24)" mat-menu-item>24</button>
+          <button (click)="updateItems(36)" mat-menu-item>36</button>
+          <!-- <button (click)="updateItems(42)" mat-menu-item>42</button> -->
+        </mat-menu>
+
+        <!-- <mat-paginator
+          [length]="500"
+          [pageSize]="25"
+          [pageSizeOptions]="[25, 50, 75, 100]"
+          aria-label="Select page"
+        >
+        </mat-paginator> -->
+      </div>
+      <button (click)="updateColumns(1)">
+        <mat-icon>view_list</mat-icon>
+      </button>
+      <button (click)="updateColumns(3)">
+        <mat-icon>view_module</mat-icon>
+      </button>
+      <button (click)="updateColumns(4)">
+        <mat-icon>view_comfy</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-card>
